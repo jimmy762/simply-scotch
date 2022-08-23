@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+//styling imports
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+//React Router imports
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+
+//component imports
+import NavBar from "./components/navbar";
+import Footer from "./components/footer";
+
+//page imports
+import Home from "./pages/home";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import Profile from "./pages/profile";
+import Favorites from "./pages/favorites";
+import Map from "./pages/map";
+import Distilleries from "./pages/distilleries";
+import Distillery from "./pages/distillery";
+import ErrorPage from "./pages/errorPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/map" element={<Map />} />
+        <Route path="/distilleries" element={<Distilleries />} />
+        <Route path="/distilleries/:distilleryId" element={<Distillery />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
-
 export default App;

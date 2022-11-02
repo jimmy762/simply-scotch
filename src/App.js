@@ -13,6 +13,8 @@ import Footer from "./components/footer";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
+import ForgotPassword from "./pages/forgotPassword";
+import ForgotUsername from "./pages/forgotUsername";
 import Profile from "./pages/profile";
 import Favorites from "./pages/favorites";
 import Map from "./pages/map";
@@ -28,6 +30,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/forgotpassword" element={<ForgotUsername />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/map" element={<Map />} />

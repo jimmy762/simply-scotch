@@ -1,8 +1,13 @@
+import { Button } from "reactstrap";
+
 function Disilleries() {
   return (
-    <div>
-      <p>this is the Disilleries page</p>
-    </div>
+    <>
+      {/* Render image of scotch regions here */}
+      <Button>Islay</Button>
+      <Button>Highlands</Button>
+      <Button>Speyside</Button>
+    </>
   );
 }
 
